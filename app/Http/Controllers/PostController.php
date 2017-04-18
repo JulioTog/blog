@@ -108,7 +108,7 @@ class PostController extends Controller
         $post->save();
         //set flash data with succes message
         Session::flash('success', 'This post whast successfully save.');
-        
+
         //redirect with flash data to post.show
         return redirect()->route('posts.show', $post->id);
     }
@@ -121,6 +121,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        Session::flash('success', 'The post whas sucesfully deleted!');
+        return redirect()->route('posts.index');
     }
 }
