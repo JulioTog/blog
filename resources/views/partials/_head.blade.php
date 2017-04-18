@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    {{Html::style('css/style.css')}}
 
     @yield('stylesheet')
 
