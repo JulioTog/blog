@@ -14,36 +14,15 @@
       </div> <!-- end of row -->
       <div class="row">
         <div class="col-md-8">
-          <div class="post">
-            <h3>Post title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
-              <a href="#"class="btn btn-primary">Read more</a>
+            @foreach ($posts as $post )
+
+          <div class="text">
+                <h3> {{ $post->title }}</h3>
+                <p> {{ $post->body }}</p>
+                <a href="#"class="btn btn-primary">Read more</a>
           </div>
           <hr>
-          <div class="post">
-            <h3>Post title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-              ...</p>
-              <a href="#"class="btn btn-primary">Read more</a>
-          </div>
-          <hr>
-          <div class="post">
-            <h3>Post title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-              ...</p>
-              <a href="#"class="btn btn-primary">Read more</a>
-          </div>
-          <hr>
-          <div class="post">
-            <h3>Post title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-              ...</p>
-              <a href="#"class="btn btn-primary">Read more</a>
-          </div>
+        @endforeach
         </div>
         <div class="col-md-3 col-md-offset-1" >
           <h2>sidebar</h2>
