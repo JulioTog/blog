@@ -2,7 +2,6 @@
 
   @section('title', '~ Home')
   @section('content')
-
       <div class="row">
         <div class="col-md-12">
           <div class="jumbotron">
@@ -27,5 +26,6 @@
         <div class="col-md-3 col-md-offset-1" >
           <h2>sidebar</h2>
         </div>
+
       </div>
 @endsection
