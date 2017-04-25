@@ -3,23 +3,28 @@
 @section('title', '~View Post')
 
 @section('content')
-<div class="row">
-  <div class="col-md-8">
 
+<div class="row">
+  <div class="col-md-8 ">
       <h1>{{$post->title}}</h1>
       <p class="lead"> {{$post->body}}</p>
   </div>
   <div class="col-md-4">
     <div class="well">
       <dl class="dl-horizontal">
-        <dt>Created At:</dt>
-        <dd>{{date('d, M Y H:i', strtotime($post->created_at))}}</dd>
-        <dt></dt>
+        <label>URL:</label>
+        <p><a href="{{url($post->slug)}}">{{url($post->slug)}}</a></p>
+
       </dl>
       <dl class="dl-horizontal">
-        <dt>Last Updated:</dt>
-        <dd>{{date('d, M Y H:i', strtotime($post->updated_at))}}</dd>
-        <dt></dt>
+        <label>Created At:</label>
+        <p>{{date('d, M Y H:i', strtotime($post->created_at))}}</p>
+
+      </dl>
+      <dl class="dl-horizontal">
+        <label>Last Updated:</label>
+        <p>{{date('d, M Y H:i', strtotime($post->updated_at))}}</p>
+
       </dl>
       <hr>
 
